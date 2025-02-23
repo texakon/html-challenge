@@ -6,6 +6,11 @@
     <title>Document</title>
     <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
     <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <style>
+        label {
+          display: block;
+        }
+    </style>
 </head>
 <body>
 <img src="img/logo.svg" alt="GO logotype">
@@ -35,6 +40,63 @@
     <li><a href="neon.html">Neon style</a></li>
 </ol>
 
+<form action="https://jsonplaceholder.typicode.com/posts" 
+      method="POST"
+      style="width: 550px;">
+  <h2>Забронировать</h2>
+<fieldset>
+
+  <fieldset>
+    <input type="radio" name="hall" value="80vibes">80's vibes
+    <input type="radio" name="hall" value="Star wars">Star wars
+    <input type="radio" name="hall" value="Wild west">Wild west 
+    <input type="radio" name="hall" value="Neon style">Neon style
+  </fieldset>
+
+  <fieldset>
+    <legend>Собери набор развлечений</legend>
+    <fieldset>
+      <legend>Приставка:</legend>
+        <input type="radio" name="gamestation" value="PlayStation">PlayStation
+        <input type="radio" name="gamestation" value="Sega Mega Drive">Sega Mega Drive
+        <input type="radio" name="gamestation" value="X-box One S">X-box One S
+        <input type="radio" name="gamestation" value="Dendy">Dendy
+      
+    </fieldset>
+
+    <fieldset>
+        <legend>Настольные игры:</legend>
+          <input type="checkbox" name="tablegame" value="Jenga">Jenga
+          <input type="checkbox" name="tablegame" value="Monopoly">Monopoly
+          <input type="checkbox" name="tablegame" value="Манчкин">Манчкин
+          <input type="checkbox" name="tablegame" value="Alias">Alias
+      </fieldset>
+
+      <fieldset>
+        <legend>Дополнительно:</legend>
+          <input type="checkbox" name="additional" value="Караоке">Караоке
+          <input type="checkbox" name="additional" value="VR">VR
+      </fieldset>
+        
+    </fieldset>
+  
+    <fieldset>
+      <legend>Выбери дату и время</legend>
+        Дата<sup>*</sup>&nbsp;<input type="date" name="date" required>
+        Время<sup>*</sup>&nbsp;<input type="time" name="time" id=""><br>
+        Количество человек<sup>*</sup>&nbsp;<input type="number" name="guests" required min="1" max="99"><br>
+        Имя<sup>*</sup>&nbsp;<input type="text" name="name" required><br>
+        Фамилия<sup>*</sup>&nbsp;<input type="text" name="surname" required><br>
+        Номер телефона<sup>*</sup>&nbsp;<input type="tel" name="tel" required><br>
+      
+        <input type="checkbox" name="18plus">Я старше 18 лет
+    </fieldset>
+  </fieldset>
+<button type="submit">Забронировать</button>
+<input type="checkbox" name="persdata-aproved" required>Согласен на обработку данных
+</form>
+
+
   <h2 id="reserve">О нас</h2>
     <p>Для наших гостей мы создали <i>концептуально новое игровое пространство виртуальной реальности</i> в центральной части города.
     </p>
@@ -53,5 +115,20 @@
   <li><a href="telegram.html">Telegram</a></li>
 </ul>
 
+<form action="https://jsonplaceholder.typicode.com/posts"
+      method="POST" style="width: 550px;">
+<fieldset>
+  <h2>Заказать звонок</h2>
+      <label>Имя<br><input type="text" name="first-name">
+      </label><br>
+      <label>Фамилия<br><input type="text" name="surname">
+      </label><br>
+      <label>Номер телефона<br><input type="tel" name="phone-number" 
+        required pattern="^\+?[7-8]-?[0-9]{3}-?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$" title="+7-___-___-__-__">
+      </label><br>
+      <label><input type="checkbox" name="agrement" required>Согласен на обработку персональных данных</label><br>
+      <input type="submit" value="Перезвоните мне"> 
+  </fieldset>
+</form>
 </body>
 </html>
